@@ -9,8 +9,6 @@ const cardsMarkUp = createGalleryMarkup(galleryItems);
 
 paletteContainer.insertAdjacentHTML('beforeend', cardsMarkUp);
 
-console.log(createGalleryMarkup(galleryItems));
-
 paletteContainer.addEventListener('click', onPaletteContainerClick);
 
 
@@ -33,8 +31,8 @@ paletteContainer.addEventListener('click', onPaletteContainerClick);
 if(!evt.target.classList.contains('gallery__image')){
     return;
 }
-const lightbox = new SimpleLightbox('.gallery a', {animationSpeed: 250});
-new SimpleLightbox('.gallery a', {captionsData:"alt", captionDelay:250});
+const lightbox = new SimpleLightbox('.gallery a', {animationSlide:true, captionsData:"alt", captionDelay:250});
+// new SimpleLightbox('.gallery a', {captionsData:"alt", captionDelay:250});
 
   }
 
