@@ -9,7 +9,7 @@ const cardsMarkUp = createGalleryMarkup(galleryItems);
 
 paletteContainer.insertAdjacentHTML('beforeend', cardsMarkUp);
 
-paletteContainer.addEventListener('click', onPaletteContainerClick);
+// paletteContainer.addEventListener('click', onPaletteContainerClick);
 
 
  function createGalleryMarkup(galleryItems) {
@@ -23,17 +23,19 @@ paletteContainer.addEventListener('click', onPaletteContainerClick);
       })
       .join('');
       
+      
   }
+  const lightbox = new SimpleLightbox('.gallery a', { captionsData:"alt", captionDelay:250});
 
-  function onPaletteContainerClick (evt){
-    evt.preventDefault();
+//   function onPaletteContainerClick (evt){
+//     evt.preventDefault();
 
-if(!evt.target.classList.contains('gallery__image')){
-    return;
-}
-const lightbox = new SimpleLightbox('.gallery a', { captionsData:"alt", captionDelay:250});
+// if(!evt.target.classList.contains('gallery__image')){
+//     return;
+// }
+
 // new SimpleLightbox('.gallery a', {animationSlide:true, captionsData:"alt", captionDelay:250});
 
-  }
+  
 
   
